@@ -8,7 +8,7 @@
 # Designs must adhere to a particular structure such that the flow may find all
 # the required information. For more information, please read the "???" section
 # in the README.
-export DESIGN_DIR := $(TOP_DIR)/examples/gcd_sverilog
+export DESIGN_DIR := $(TOP_DIR)/examples/opdb/dynamic_node/NETWORK_2dmesh
 
 # Include the design configuration file. This usually lives in you design
 # directory. For more information, please read the "???" section in the README.
