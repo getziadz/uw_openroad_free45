@@ -25,7 +25,7 @@ prep.tools:
 	cd $(TOOLS_DIR) && \
 		wget https://github.com/The-OpenROAD-Project/alpha-release/releases/download/v2019-09-05_20-10/OpenROAD-2019-09-05_20-10.tar.gz && \
 		tar xvf OpenROAD-2019-09-05_20-10.tar.gz && \
-		mkdir -p lib && ln -nsf /usr/lib64/libffi.so.6 lib/libffi.so.5
+		mkdir -p lib && ln -nsf /usr/lib64/libffi.so.6 lib/libffi.so.5 && ln -snf /usr/lib64/libtcl8.6.so lib/libtcl8.5.so
 	# OpenROAD alpha-release flow
 	cd $(TOOLS_DIR) && \
 		git clone https://github.com/The-OpenROAD-Project/alpha-release.git && \
