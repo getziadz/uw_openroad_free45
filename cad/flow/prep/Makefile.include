@@ -35,8 +35,8 @@ prep.sv2v:
 	@## Download and prep bsg_sv2v.
 	mkdir -p $(TOOLS_DIR)
 	cd $(TOOLS_DIR) && \
-		git clone https://github.com/bespoke-silicon-group/bsg_sv2v && \
-		cd bsg_sv2v && git checkout 4ebcddf && $(MAKE) tools
+		git clone https://github.com/getziadz/bsg_sv2v && \
+		cd bsg_sv2v && git checkout getziadz-patch-1 && $(MAKE) tools
 	mkdir -p $(PREP_VPATH) ; touch $(PREP_VPATH)/$@
 
 prep.openroad:
@@ -45,6 +45,7 @@ prep.openroad:
 	cd $(TOOLS_DIR)/openroad && \
 		wget https://github.com/bsg-idea/uw_openroad_free45/releases/download/v0.1/openroad.d21019e.tar.gz && \
 		tar -xvf openroad.d21019e.tar.gz
+	mkdir -p lib && ln -nsf /usr/lib64/libffi.so.6 lib/libffi.so.5 && ln -snf /usr/lib64/libtcl8.6.so lib/libtcl8.5.so
 	mkdir -p $(PREP_VPATH) ; touch $(PREP_VPATH)/$@
 
 #=======================================
